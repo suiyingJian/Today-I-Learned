@@ -1,4 +1,9 @@
 {
     "editor.fontLigatures": false,
-    "vim.useCtrlKeys":"true"
+    "vim.useCtrlKeys":"true",
+    "vim.handleKeys": {
+        "<C-c>": false,
+        // "<C-a>": false, 
+        "<C-f>" : false,
+      },
 }

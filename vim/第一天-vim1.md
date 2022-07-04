@@ -14,9 +14,10 @@ l 右
 const aa = 1
 const bb = 2
 
+const aa = 11
 
-const aa = 1
-const bb = 2
+const aa = 11
+const bb = 22
 
 
 ```
