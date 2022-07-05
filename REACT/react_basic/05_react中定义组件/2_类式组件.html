@@ -23,7 +23,7 @@
       class MyCompontent extends React.Component {
         render() {
           //render方法放在了哪里？---类的原型对象上,供实例使用
-          //render中的this是谁？—————MyComponent的实例对象<=>MyComponent组件实例对象。
+          //render中的this是谁？—————MyComponent的实例对象MyComponent组件实例对象。
           console.log("render中的this", this);
           return <h2>我是用类定义的组件（适用于【复杂组件】的定义）</h2>;
         }
