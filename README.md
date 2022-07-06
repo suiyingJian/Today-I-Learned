@@ -6,6 +6,7 @@ A collection of concise write-ups on small things I learn day to day across a va
 
 ```
 git init 
+git status
 git add . 
 git commit -m "" 
 git 仓库初始化命令【三行】
