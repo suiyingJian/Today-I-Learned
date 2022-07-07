@@ -40,8 +40,8 @@ set.size
 // [...new Set(array)]
 
 // 去除字符串里面的重复字符
-let a = [...new Set('ababbc')].join('')
-console.log(a);
+let aa = [...new Set('ababbc')].join('')
+console.log(aa);
 
 /**
  * Set里面加入值，不会发生类型转换，5和‘5’是两个不同的值，Set内部判断两个值是否相等，用的算法是'Same-value-zero-eqiality',类似于精确相等运算符（===）区别在于，Set中加入值时认为NaN等于自身，而三等运算符则认为NaN不等于自身
