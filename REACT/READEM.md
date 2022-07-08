@@ -44,3 +44,6 @@ P14 react 中事件绑定：[对应06]
 数组reduce方法如何使用，...扩展运算符，解构赋值
 
 props 是只读的
+
+props 里面存的是 属性名和属性值
+refs 相当于封装好的id 不用在使用document.getElementById 来获取
