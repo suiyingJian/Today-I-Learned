@@ -22,7 +22,7 @@
       //构造字面量对象时使用展开语法
       let person = { name: "tom", age: 18 };
       let person2 = { ...person };
-      //console.log(...person); //报错，展开运算符不能展开对象
+      // console.log(...person); //报错，展开运算符不能展开对象
       person.name = "jerry";
       console.log(person2);
       console.log(person);
