@@ -1,11 +1,16 @@
 console.log(process.argv[2]);
 console.log(process.argv[3]);
 
+// console.clear();
 console.clear();
 
 process.argv.forEach(item => {
   console.log(item);
 })
+
+// function foo() {
+//   bar();
+// }
 
 function foo() {
   bar();
