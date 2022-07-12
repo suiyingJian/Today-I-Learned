@@ -15,3 +15,8 @@ git branch
 git push
 
 ```
+
+```
+yarn add
+yarn start
+```
