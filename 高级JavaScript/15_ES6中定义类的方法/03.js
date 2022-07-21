@@ -24,4 +24,25 @@ class Person{
         console.log("拦截设置操作");
         this._address = newAddress
     }
+
+    static randomPerson() {
+        var nameIndex = Math.floor(Math.random() * names.length)
+        var name = names[nameIndex]
+        var agee = Math.floor(Math.random() * 100)
+        return new Person(name,age)
+    }
+}
+
+var p = new Person("why", 18)
+p.eating()
+p.running()
+
+console.log(p.address);
+p.address = "北京市"
+console.log(p.address);
+
+console.log(Objext.getOwnPropertyDescriptors(Person.prototype));
+
+for (var i = 0; i < 50; i++) {
+    console.log(Person.randomPeirson());
 }
