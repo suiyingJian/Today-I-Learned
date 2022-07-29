@@ -16,8 +16,8 @@ for (let i of s) {
  * Set函数可接受一个数组【具有iterable接口的其他数据结构】作为参数，用来初始化
  */
 // 例一
-const set = new Set([1, 2, 3, 4, 4]);
-[...set]    //[1,2,3,4]
+const s1 = new Set([1, 2, 3, 4, 4]);
+[...s1]    //[1,2,3,4]
 
 // 例2
 const items = new Set([1, 2, 3, 4, 5, 5, 5, 5])
