@@ -46,7 +46,8 @@ console.log(aa);
 /**
  * Set里面加入值，不会发生类型转换，5和‘5’是两个不同的值，Set内部判断两个值是否相等，用的算法是'Same-value-zero-eqiality',类似于精确相等运算符（===）区别在于，Set中加入值时认为NaN等于自身，而三等运算符则认为NaN不等于自身
  */
-let set = new Set()
+
+// let set = new Set()
 let a = NaN;
 let b = NaN;
 set.add(a)
