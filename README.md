@@ -10,7 +10,16 @@ git status
 git add . 
 git commit -m "" 
 git 仓库初始化命令【三行】
-git branch
+git branch  分支名
+
+git checkout master 切换分支
+
+git checkout -b 分支名
+
+git cheackout main
+git merge login         //在主分支上运行git merge 命令，将login 分支合并到main分支
+
+git branch -d 分支名    //删除分支
 
 git push
 

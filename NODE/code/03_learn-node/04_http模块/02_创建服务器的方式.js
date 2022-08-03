@@ -13,17 +13,17 @@ const server1 = http.createServer((req, res) => {
 //   res.end("Server2");
 // });
 
-// const server2 = new http.Server((req, res) => {
-//   res.end("Server2");
-// });
+const server2 = new http.Server((req, res) => {
+  res.end("Server2");
+});
 
-// server2.listen(8001, () => {
-//   console.log("server2启动成功~");
-// });
+server2.listen(8001, () => {
+  console.log("server2启动成功~");
+});
 
 
 // 2.监听方法的使用
 server1.listen(8000, () => {
   console.log("server1启动成功~");
-  // console.log(server1.address().port);
+  // console.log(server1.address().port);     //获取端口号（8000）第一个参数
 });

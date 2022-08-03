@@ -9,15 +9,23 @@ const server = http.createServer((req, res) => {
   if (pathname === '/login') {
     if (req.method === 'POST') {
       // 拿到body中的数据
+      // req.on('data', (data) => {
+      //   console.log(data.toString())
+      // }) 
+
       req.setEncoding('utf-8');
       req.on('data', (data) => {
-        const {username, password} = JSON.parse(data);
-        console.log(username, password);
+        // console.log(data);
+        // const {username, password} = JSON.parse(data);
+        // console.log(username, password);
+
+        const { username, password } = JSON.parse(data);
+        console.log(username,password);
       });
 
       res.end("Hello World");
     }
-  }
+  } 
 });
 
 server.listen(8888, '0.0.0.0', () => {
