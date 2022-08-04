@@ -21,3 +21,15 @@ function myNew(fn, ...args) {
 // // console.log(p1.name);
 // // console.log(p1);
 // // p1.say();
+
+
+
+
+
+
+function MyNew(foo, ...args) {
+  let obj = Object.create(foo.prototype)
+  let result = foo.apply(obj, args)
+  
+  return Object.prototype.toString.call(result) === '[object Object]' ? result : obj
+}
