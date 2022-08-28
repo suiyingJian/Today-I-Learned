@@ -18,3 +18,7 @@ npm run prettier
 
 
 项目自己集成vuex@next 和router 都要@next 最新版本的 不然会出错
+
+
+
+0828    npm 和 yarn 能不能混用？
