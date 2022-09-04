@@ -25,6 +25,17 @@ const instanceOf = (l, r) => {
     return false
 }
 
+function myInstanceOf(left, right) {
+    while (true) {
+        if (left === null) {
+            return false;
+        }
+        if (left.__proto__ === right.prototype) {
+            return true
+        }
+        left = left.__proto__
+    }
+}
 /**
  * 
  * 首先创建一个新的空对象
@@ -51,4 +62,56 @@ function New(foo, args) {
     let result = foo.apply(obj, args)
     
     return Object.prototype.toString.call(result) === '[object Object]' ? result : obj
+}
+
+//数组去重
+function uniqueArr(arr) {
+    return [...new Set(arr)];
+}
+
+function uniqueArr(arr) {
+    return [...new Set(arr)]
+}
+
+const MyArr = (arr) => {
+    return [...new Set(arr)]
+}
+
+Function.prototype.myCall = function (context, ...args) {
+    if (!context || context === null) {
+        context = window;
+    }
+
+    let fn = Symbol();
+    context[fn] = this;
+
+    return context[fn](...args);
+}
+
+/**
+ * 
+ * 1. 判断调用对象是否为函数，即使我们是定义在函数原型上的，但可能出现使用call等方式调用情况。
+ * 2.判断传入上下文对象是否存在，若不存在，则设置为window
+ * 3. 处理传入的参数，截取第一个参数有后的所有参数
+ * 4. 将函数作为上下文对象的一个属性
+ * 5. 使用上下文对象来调用这个方法，并保存返回结果
+ * 6. 删除刚才新增的属性
+ * 7. 返回结果
+ */
+Function.prototype.myCall = function (context) {
+    if (typeof this !== 'function') {
+        console.error('type error')
+    }
+
+    let args = [...arguments].slice(1),
+        result = null;
+    
+    context = context || window
+    
+    context.fn = this
+
+    result = context.fn(...args)
+
+    delete context.fn
+    return result;
 }
