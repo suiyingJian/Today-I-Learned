@@ -155,3 +155,14 @@ Function.prototype.myApply = function (context) {
     return result;
 
 }
+
+Function.prototype.myApply = function (context, args) {
+    if (!context || context === null) {
+        context = window;
+    }
+
+    let fn = Symbol();
+    contest[fn] = this;
+
+    return context[fn](...args)
+}
