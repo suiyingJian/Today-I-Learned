@@ -26,3 +26,31 @@ console.log(sum2(10)(20)(30));
 
 var sum3 = x => y => z => x + y + z
 console.log(sum3(10)(20)(30));
+
+function myCurrying(fn) {
+    function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn.apply(this,args)
+        } else {
+            function curried2(...args2) {
+                return curried.apply(this,args.concat(args2))
+            }
+            return curried2
+        }
+    }
+    return curried
+}
+
+function currying(fn, ...args) {
+    const length = fn.length;
+    let allArgs = (...newArgs) => {
+        allArgs = [...allArgs, ...newArgs];
+        if (allArgs.length === length) {
+            return fn(...allArgs)
+        } else {
+            return res;
+        }
+    }
+    return res;
+    
+}
