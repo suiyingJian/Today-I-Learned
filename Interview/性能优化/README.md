@@ -1,6 +1,6 @@
 # 前端性能优化
 
-<img src="./性能优化.jpg" alt="image-20220908223019862" style="zoom:150%;" />
+<img src="./性能优化.jpg" alt="image-20220908223019862" style="zoom:100%;" />
 
 ## 网络层面
     请求过程的优化      -HTTP请求优化
