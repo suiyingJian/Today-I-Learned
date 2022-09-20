@@ -62,4 +62,4 @@ vue 性能优化：
 
 
 
-<img src="./1.png" alt="1" style="zoom:200%;" />
+<img src="./1.png" alt="1" style="zoom:100%;" />
